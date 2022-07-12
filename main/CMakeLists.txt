@@ -1,0 +1,14 @@
+set(srcs "main.c"
+    "../components/driver.c"
+    "../components/button/button.c"
+    "../components/led/led.c"
+    )
+    
+    
+idf_component_register(
+	SRCS ${srcs}
+    INCLUDE_DIRS "."
+    PRIV_INCLUDE_DIRS
+    REQUIRES
+    PRIV_REQUIRES
+)
